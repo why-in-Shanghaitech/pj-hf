@@ -16,7 +16,7 @@ import evaluate
 import util
 
 
-def get_macro_f1_metric() -> Callable[[], float]:
+def get_macro_f1_metric() -> Callable[[list[int], list[int]], float]:
     """
     Question:
         Load the macro F1 metric from the Hugging Face Evaluation library.

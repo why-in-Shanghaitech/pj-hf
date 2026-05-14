@@ -1,4 +1,4 @@
-# CS274A Natural Language Processing Spring 2025 Project
+# CS274A Natural Language Processing Spring 2026 Project
 
 <div align="center">
 <img width="200" src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" />

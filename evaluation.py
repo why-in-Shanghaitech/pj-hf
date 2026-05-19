@@ -10,13 +10,12 @@
 # The core projects and autograders were adapted by Haoyi Wu (wuhy1@shanghaitech.edu.cn)
 
 
-from typing import Callable
+from typing import Callable, List, Any
 import argparse
 import evaluate
-import util
 
 
-def get_macro_f1_metric() -> Callable[[list[int], list[int]], float]:
+def get_macro_f1_metric() -> Callable[[List[Any], List[Any]], float]:
     """
     Question:
         Load the macro F1 metric from the Hugging Face Evaluation library.

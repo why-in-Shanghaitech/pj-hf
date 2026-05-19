@@ -4,7 +4,7 @@ failure: "The vocab order should not be changed."
 
 preamble: """
 import tokenizers
-vocab = {'Ġ': 0, '1': 1, '2': 2, '3': 3, 'Ġ1': 4, 'Ġ2': 5, '12': 6, 'Ġ12': 7, 'Ġ3': 8}
+vocab = {'1': 1, '2': 2, '3': 3, 'Ġ1': 4, 'Ġ2': 5, '12': 6, 'Ġ12': 7, 'Ġ3': 8, 'Ġ': 0}
 merges = [('Ġ', '1'), ('Ġ', '2'), ('Ġ', '3'), ('1', '2'), ('Ġ1', '2')]
 tokenizer.clean_vocab(vocab, merges)
 vocab_items = sorted(vocab.items(), key=lambda x: x[1])

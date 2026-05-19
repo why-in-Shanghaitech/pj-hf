@@ -263,9 +263,9 @@ class ClassificationTest(testClasses.TestCase):
     def execute(self, grades, moduleDict, solutionDict):
         # load the module
         bindings = dict(moduleDict)
-        get_topic_classification_pipeline = bindings["classification"].get_topic_classification_pipeline
+        get_intent_classification_pipeline = bindings["classification"].get_intent_classification_pipeline
 
-        pipe = get_topic_classification_pipeline()
+        pipe = get_intent_classification_pipeline()
 
         # sanity check
         sample = "Would the US constitution be changed if the admendment received 2/3 of the popular vote?"
@@ -310,29 +310,28 @@ class ClassificationTest(testClasses.TestCase):
             grades.addMessage('\tThe score of the output must be in [0, 1].')
             return False
         
-        if output["label"] not in ["Society & Culture", "Science & Mathematics", "Health", "Education & Reference", "Computers & Internet", "Sports", "Business & Finance", "Entertainment & Music", "Family & Relationships", "Politics & Government"]:
+        if output["label"] not in ["FACT", "QUESTION", "REQUEST", "OPINION", "COMPLAINT"]:
             grades.addMessage('FAIL: %s' % self.path)
             grades.addMessage('\t%s' % self.failure)
             grades.addMessage('\t      sentence: "%s"' % sample)
             grades.addMessage('\tstudent result: "%s"' % output)
-            grades.addMessage('\tThe label of the output must be one of the following: "Society & Culture", "Science & Mathematics", "Health", "Education & Reference", "Computers & Internet", "Sports", "Business & Finance", "Entertainment & Music", "Family & Relationships", "Politics & Government".')
+            grades.addMessage('\tThe label of the output must be one of the following: "FACT", "QUESTION", "REQUEST", "OPINION", "COMPLAINT".')
             return False
         
         # test the pipeline
         ds_kwargs = eval(self.ds_kwargs, bindings)
         ds = datasets.load_dataset(**ds_kwargs)
         ds = ds.select(self.random.sample(range(len(ds)), self.num_samples))
-        labels = ds.features['topic'].names
 
         cnts = [0, 0]
         failed_sample = None
         for data in ds:
-            text = data['question_title']
+            text = data['text']
             result = pipe(text)
 
-            if labels[data['topic']] != result["label"]:
+            if data['label_text'] != result["label"]:
                 cnts[1] += 1
-                failed_sample = (text, result["label"], labels[data['topic']])
+                failed_sample = (text, result["label"], data['label_text'])
             
             cnts[0] += 1
 

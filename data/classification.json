@@ -1,0 +1,502 @@
+[
+  {
+    "text": "The library closes at 6 p.m. on Fridays.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The train arrived at the station ten minutes early.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The company opened a new office in Berlin.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The meeting was scheduled for Monday morning.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The package was delivered to the front desk.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The report contains data from the last quarter.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The museum is located near the central park.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The software update was released yesterday.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The restaurant serves breakfast until 11 a.m.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The flight departs from gate 14.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The classroom has thirty chairs.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The phone battery is at 80 percent.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The event will take place in the main hall.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The store accepts both cash and credit cards.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The document was uploaded to the shared folder.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The city council approved the budget last night.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The printer is connected to the office network.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The conference begins on September 12.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The hotel offers free parking for guests.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "The application form requires a valid email address.",
+    "label": 0,
+    "label_text": "FACT"
+  },
+  {
+    "text": "What time does the library close today?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Where did you save the presentation file?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "How many people attended the workshop?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "When will the next software update be available?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Which train goes to the airport?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Who is responsible for the marketing report?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Why was the meeting moved to Tuesday?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "How do I reset my account password?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "What is the deadline for the application?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Where can I find the customer feedback form?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "How long does the delivery usually take?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Which room is being used for the interview?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "What documents are needed for registration?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Who approved the final version of the contract?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "When does the online course start?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "How much does the monthly subscription cost?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Where is the nearest bus stop?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "What caused the delay in the shipment?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Which version of the app are you using?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "How often is the database backed up?",
+    "label": 1,
+    "label_text": "QUESTION"
+  },
+  {
+    "text": "Please send me the updated invoice.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Turn off the lights before you leave.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Add my name to the attendee list.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Please review the document by tomorrow afternoon.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Call the client after the meeting.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Upload the final slides to the shared folder.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Please confirm your attendance by Friday.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Send the tracking number when it becomes available.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Update the project timeline with the new dates.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Please print two copies of the contract.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Forward the email to the finance team.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Reserve a table for four people tonight.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Please check whether the payment has been received.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Move the chairs to the back of the room.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Schedule a follow-up call for next week.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Please attach the receipt to your expense report.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Share the meeting notes with everyone on the team.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Replace the empty water bottles in the conference room.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Please update your contact information in the system.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "Prepare a short summary of the customer survey results.",
+    "label": 2,
+    "label_text": "REQUEST"
+  },
+  {
+    "text": "The new dashboard is very easy to understand.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "I think the movie was more exciting than the book.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "This coffee tastes better than the one from yesterday.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The design of the website looks modern and clean.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "I prefer working in the morning rather than at night.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The presentation was clear and well organized.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "This book is a great introduction to machine learning.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The blue version of the logo looks more professional.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "I believe the proposal is practical and realistic.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The hotel room was comfortable and nicely decorated.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "This training session was useful for beginners.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The new keyboard feels smoother than the old one.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "I like the simple layout of the mobile app.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The article makes a convincing argument.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The team handled the difficult situation very well.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "This chair is more comfortable than it looks.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The software interface feels intuitive to me.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "I found the lecture interesting and informative.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The meal was delicious and worth the price.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The plan seems efficient for a small team.",
+    "label": 3,
+    "label_text": "OPINION"
+  },
+  {
+    "text": "The website keeps freezing when I try to log in.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "My order arrived with two missing items.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The printer has been making loud noises all morning.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The app crashes every time I open the settings page.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The delivery was delayed without any notification.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The room was not cleaned before we checked in.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The customer service line kept disconnecting my call.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The payment page shows an error after I enter my card details.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The product stopped working after only two days.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The elevator has been out of service since yesterday.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The audio in the video is too distorted to understand.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The invoice contains the wrong billing address.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The Wi-Fi connection drops every few minutes.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The salad I received was missing the dressing.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The login code never arrived in my email.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The new update removed a feature that I use every day.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The bus was overcrowded and arrived twenty minutes late.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The screen has a scratch that was there when I opened the box.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The support team has not replied to my ticket in three days.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  },
+  {
+    "text": "The thermostat does not respond when I change the temperature.",
+    "label": 4,
+    "label_text": "COMPLAINT"
+  }
+]

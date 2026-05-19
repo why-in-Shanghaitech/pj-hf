@@ -36,6 +36,12 @@ def tokenize_function(example):
 
 tokenized_dataset = dataset.map(tokenize_function, batched=False, remove_columns=["text"], load_from_cache_file=False)
 mapped_dataset = tokenized_dataset.map(mapping_function, batched=False, remove_columns=["actions"], load_from_cache_file=False)
+
+def post_mapping_function(example):
+    attention_mask = [[bool(item) for item in row] for row in example["attention_mask"]]
+    return {"boolean_attention_mask": attention_mask}
+
+post_mapped_dataset = mapped_dataset.map(post_mapping_function, batched=False, load_from_cache_file=False)
 """
 
-test: "'\n'.join([str(x[key]) for x in mapped_dataset for key in ['inputs', 'labels', 'position_ids', 'attention_mask']])"
+test: "'\n'.join([str(x[key]) for x in post_mapped_dataset for key in ['inputs', 'labels', 'position_ids', 'boolean_attention_mask']])"

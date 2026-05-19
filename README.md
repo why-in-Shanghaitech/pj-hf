@@ -160,32 +160,32 @@ To run the example above, simply execute:
 python classification.py --use-gradio
 ```
 
-There are many other tasks you can do with Hugging Face Transformers, such as text generation, translation, summarization, and more. You can find the full list of tasks in [here](https://huggingface.co/docs/transformers/tasks). The community has also created many models for various tasks, and you can find them in the [model hub](https://huggingface.co/models).
+There are many other tasks you can do with Hugging Face Transformers, such as text generation, translation, summarization, and more. You can find the full list of tasks in [here](https://huggingface.co/tasks). The community has also created many models for various tasks, and you can find them in the [model hub](https://huggingface.co/models).
 
 > [!NOTE]
-> If you have trouble visiting Hugging Face, use the mirrors instead: [main site](https://hf-mirror.com), [tasks](https://hf-mirror.com/docs/transformers/tasks), [model hub](https://hf-mirror.com/models).
+> If you have trouble visiting Hugging Face, use the mirrors instead: [main site](https://hf-mirror.com), [tasks](https://hf-mirror.com/tasks), [model hub](https://hf-mirror.com/models).
 
-In this question, you will search for a small pretrained model to classify any given text into one of the following 10 topics: `Society & Culture`, `Science & Mathematics`, `Health`, `Education & Reference`, `Computers & Internet`, `Sports`, `Business & Finance`, `Entertainment & Music`, `Family & Relationships`, `Politics & Government`. You can use any model you like so long as it can complete the task. Do not use too large models since it would easily run out of time. A model with 100M params is enough.
+In this question, you will search for a small pretrained model to classify any given text into one of the following 5 intents: `FACT`, `QUESTION`, `REQUEST`, `OPINION`, `COMPLAINT`. You can use any model you like so long as it can complete the task. Do not use too large models since it would easily run out of time. A model with 100M params is enough.
 
-Implement the function `get_topic_classification_pipeline` in `classification.py`. We will test your function with a small test set and your grade will be based on the accuracy of your model on this test set:
+Implement the function `get_intent_classification_pipeline` in `classification.py`. We will test your function with a small test set and your grade will be based on the accuracy of your model on this test set:
 
 | **Accuracy** | **Grade** |
 | ------------ | --------- |
 | < 30%        | 0         |
-| 30% - 35%    | 1         |
-| 35% - 50%    | 2         |
-| >= 50%       | 3         |
+| 30% - 50%    | 1         |
+| 50% - 65%    | 2         |
+| >= 65%       | 3         |
 
 To run the example:
 
 ```bash
-python classification.py --task topic
+python classification.py --task intent
 ```
 
 To run your model with gradio:
 
 ```bash
-python classification.py --task topic --use-gradio
+python classification.py --task intent --use-gradio
 ```
 
 To run the autograder for this question:

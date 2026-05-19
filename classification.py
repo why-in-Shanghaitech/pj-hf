@@ -16,14 +16,12 @@ from transformers import pipeline
 import gradio as gr
 
 
-def get_topic_classification_pipeline() -> Callable[[str], dict]:
+def get_intent_classification_pipeline() -> Callable[[str], dict]:
     """
     Question:
-        Load the pipeline for topic text classification.
-        There are 10 possible labels: 
-            'Society & Culture', 'Science & Mathematics', 'Health',
-            'Education & Reference', 'Computers & Internet', 'Sports', 'Business & Finance',
-            'Entertainment & Music', 'Family & Relationships', 'Politics & Government'
+        Load the pipeline for intent text classification.
+        There are 5 possible labels: 
+            'FACT', 'QUESTION', 'REQUEST', 'OPINION', 'COMPLAINT'
         Find a proper model from HuggingFace Model Hub, then load the pipeline to classify the text.
         Notice that we have time limits so you should not use a model that is too large. A model with 
         100M params is enough.
@@ -33,9 +31,9 @@ def get_topic_classification_pipeline() -> Callable[[str], dict]:
         predicted label and its score.
 
     Example:
-        >>> func = get_topic_classification_pipeline()
-        >>> result = func("Would the US constitution be changed if the admendment received 2/3 of the popular vote?")
-        {"label": "Politics & Government", "score": 0.9999999403953552}
+        >>> func = get_intent_classification_pipeline()
+        >>> result = func("Can you send me the document?")
+        {"label": "REQUEST", "score": 0.9999999403953552}
     """
     pipe = pipeline(model="cointegrated/rubert-tiny-sentiment-balanced")
     def func(text: str) -> dict:
@@ -44,8 +42,8 @@ def get_topic_classification_pipeline() -> Callable[[str], dict]:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Topic Classification Pipeline")
-    parser.add_argument("--task", type=str, help="Task name", choices=["sentiment", "topic"], default="sentiment")
+    parser = argparse.ArgumentParser(description="Intent Classification Pipeline")
+    parser.add_argument("--task", type=str, help="Task name", choices=["sentiment", "intent"], default="sentiment")
     parser.add_argument("--use-gradio", action="store_true", help="Use Gradio for UI")
 
     args = parser.parse_args()
@@ -56,9 +54,9 @@ def main():
         iface = gr.Interface.from_pipeline(pipe)
         iface.launch()
 
-    elif args.use_gradio and args.task == "topic":
-        # Visualize the topic classification pipeline with Gradio
-        pipe = get_topic_classification_pipeline()
+    elif args.use_gradio and args.task == "intent":
+        # Visualize the intent classification pipeline with Gradio
+        pipe = get_intent_classification_pipeline()
         iface = gr.Interface(
             fn=lambda x: {item["label"]: item["score"] for item in [pipe(x)]},
             inputs=gr.components.Textbox(label="Input", render=False),
@@ -72,10 +70,10 @@ def main():
         pipe = pipeline(model="cointegrated/rubert-tiny-sentiment-balanced")
         print(pipe("This movie is great!")[0]) # {'label': 'positive', 'score': 0.988831102848053}
 
-    elif not args.use_gradio and args.task == "topic":
+    elif not args.use_gradio and args.task == "intent":
         # Test the function
-        func = get_topic_classification_pipeline()
-        print(func("Would the US constitution be changed if the admendment received 2/3 of the popular vote?")) # {"label": "Politics & Government", "score": ...}
+        func = get_intent_classification_pipeline()
+        print(func("Can you send me the document?")) # {"label": "REQUEST", "score": ...}
 
 
 if __name__ == "__main__":

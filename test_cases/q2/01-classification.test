@@ -8,6 +8,6 @@ timeout: "60"
 random_seed: "42"
 
 # The dataset used to verify
-ds_kwargs: "{'path': 'community-datasets/yahoo_answers_topics', 'split': 'test', 'data_files': {'test': 'yahoo_answers_topics/test-00000-of-00001.parquet'}, 'verification_mode': 'no_checks'}"
-num_samples: "83"
-thresholds: "0.30 0.35 0.50"
+ds_kwargs: "{'path': 'json', 'split': 'train', 'data_files': {'train': 'data/classification.json'}}"
+num_samples: "100"
+thresholds: "0.30 0.50 0.65"

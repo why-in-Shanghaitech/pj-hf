@@ -46,7 +46,7 @@ class TestParser(object):
     def parse(self):
         # read in the test case and remove comments
         test = {}
-        with open(self.path) as handle:
+        with open(self.path, "r", encoding="utf-8") as handle:
             raw_lines = handle.read().split('\n')
 
         test_text = self.removeComments(raw_lines)

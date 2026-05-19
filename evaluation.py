@@ -13,6 +13,7 @@
 from typing import Callable, List, Any
 import argparse
 import evaluate
+import util
 
 
 def get_macro_f1_metric() -> Callable[[List[Any], List[Any]], float]:

@@ -71,7 +71,7 @@ If you want to show the input parameter of your failed cases in question 1, run
 
 ## Question 1 (2 points): The BPE Tokenizer
 
-We first start with the tokenizers. In class, we have learnt about the BPE tokenizer. In this project, we will use an off-the-shelf tokenizer which was originally proposed in [GPT-2](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf) by OpenAI. It uses a byte-level version of BPE, which is slightly different from the BPE we learnt in class. It maps all the bytes to an initial alphabet with the size as small as 256 characters (as opposed to the 130,000+ Unicode characters). In addition, this tokenizer adds a special character `Ġ` in front of each token (except the first one), instead of adding a special character `_` at the end of each token.
+We first start with the tokenizers. In class, we have learnt about the BPE tokenizer. In this project, we will use an off-the-shelf tokenizer which was originally proposed in [GPT-2](https://storage.prod.researchhub.com/uploads/papers/2020/06/01/language-models.pdf) by OpenAI. It uses a byte-level version of BPE, which is slightly different from the BPE we learnt in class. It maps all the bytes to an initial alphabet with the size as small as 256 characters (as opposed to the 130,000+ Unicode characters). In addition, this tokenizer adds a special character `Ġ` in front of each token (except the first one), instead of adding a special character `_` at the end of each token.
 
 In this question, your task is to manipulate a pre-trained tokenizer to prevent it from tokenizing numbers. Let's first take a look at an example:
 
